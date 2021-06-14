@@ -1,4 +1,6 @@
 # namalunek_blog
 Blog website design
 
-More info: https://read.cv/xlpnsk/JEMdf98GoXVlUY9PYJ7T
+**Check out this design now** https://xlpnsk.github.io/namalunek_blog/
+
+**More info about the project:** https://read.cv/xlpnsk/JEMdf98GoXVlUY9PYJ7T
