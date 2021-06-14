@@ -1,0 +1,130 @@
+#slideshow img{
+width:100%;
+height:500px;
+}
+#slideshow {
+position:relative;
+height:500px;
+}
+#slideshow img {
+position:absolute;
+top:0;
+left:0;
+z-index:8;
+}
+#slideshow img.active {
+z-index:10;
+}
+#slideshow img.last-active {
+z-index:9;
+}
+#test
+{
+    background: #cccccc;
+}
+footer
+{
+    background: black;
+}
+.przyklad{
+    overflow: hidden;
+
+border:1px solid #000;
+}
+.przyklad img {
+    transition-duration: 3s;
+    margin: 0 auto;
+    display: block;
+}
+.przyklad img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    z-index: 0;
+}
+.btn
+{
+    background: black;
+    color: white;
+}
+.rama
+{
+    padding-top: 25px;
+}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+@media (min-width: 992px) and (max-width: 1090px)
+{
+    .icon-bar
+    {
+        visibility: hidden;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1270px)
+{
+    .icon-bar
+    {
+        visibility: hidden;
+    }
+}
+@media (min-width: 767px) and (max-width: 850px)
+{
+    .icon-bar
+    {
+        visibility: hidden;
+    }
+}
+@media (max-width: 635px)
+{
+    .icon-bar
+    {
+        visibility: hidden;
+    }
+}

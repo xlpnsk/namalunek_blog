@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Lipiński Adam">
+
+  <title>namalunek</title>
+  <link rel="shortcut icon" href="photos/logo2.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/small-business.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/slide.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="padding-top: 150px;">
+
+  <!-- Navigation -->
+  <nav id="test" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="photos/logo2.png" alt="namalunek"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galery.html">Galery
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact
+                <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- The social media icon bar -->
+<div class="icon-bar">
+  <a href="https://facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://google.com/" class="google"><i class="fa fa-google"></i></a>
+  <a href="https://linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="https://youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+  
+  <!-- Page Content -->
+  <div class="container">
+      <div class="row">
+      <div class="col-md-6 mb-5">
+        <div class="card h-100">
+            <form id="formcont">
+          <div class="card-body">
+            <h2 class="card-title">Make an appointment!</h2>
+            <div class="card-text">
+                <table>
+                    <tr> <td><label for="fname"> First name*:</label></td><td> <input type="text" name="fname" id="fname" required title="Your first name"/></td></tr>
+                    <tr> <td><label for="lname"> Last name*:</label></td><td> <input type="text" name="lname" id="lname" required title="Your last name"/></td></tr>
+                    <tr> <td><label for="mail"> E-mail*:</label></td><td> <input type="email" name="mail" id="mail" required placeholder="xyz@mail.com" title="Your e-mail address. Remember that it must contain '@' symbol"/></td></tr>
+                    <tr> <td><label for="tel"> Tel.*:</label></td><td> <input type="tel" name="tel" id="tel" required placeholder="123-456-789" title="Your phone number. It consists of nine digits"/> </td></tr>
+                    <tr> <td><label for="date"> Date*:</label></td><td> <input type="date" name="date" id="date" required title="When do you want to meet?"/> </td></tr>
+                    <tr> <td><label for="time"> Time*:</label></td><td> <input type="time" name="time" id="time" required title="What time suits you best"/> </td></tr>
+                    <tr> <td rowspan="1"><label for="topic"> Topic*:</label></td><td><select name="topic" id="topic" multiple size="3" required title="Choose which subjects do you want to discuss">
+                        <option value="Photography">Photography</option>
+                        <option value="Film">Film</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Painting">Painting</option>
+                        <option value="General art">General art</option>
+                        <option value="Business">Business</option>
+                    </select></td></tr>
+                    <tr> <td><label for="color"> Choose color :)</label></td><td> <input type="color" name="color" id="color" title="Just to spice up your booking!"/> </td></tr>
+                    <tr> <td><label for="extra"> Extra info:</label></td><td> <textarea name="extra" id="extra" class="form-control" rows="6" 
+              placeholder="Type message text here"></textarea> </td></tr>
+                </table><br/>
+                <div id='alarm' hidden></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <input type="checkbox" name="akceptacja"  id="accept" title="You have to accept our policies to proceed!">*I accept the terms of service <br />
+            <input type="button" id="save" name="save" value="Book" onclick="check()" class="btn btn-sm"/>
+            <input type="button" id="del" name="del" value="Delete all" onclick='delall()' class="btn btn-sm"/>
+          </div>
+            </form>
+        </div>
+      </div>
+          <div class="col-md-6 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Booked appointments:</h2>
+            <div class="card-text" id="local"></div>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Recently added:</h2>
+            <div class="card-text" id="session"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>    
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Lipiński Adam 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+
+</html>
